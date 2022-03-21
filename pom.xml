@@ -87,7 +87,7 @@
 			</build>
         </profile>
 	<!-- test profile creation -->
-        <profile>
+       <!-- <profile>
             <id>test</id>
             <properties>
                 <env>test</env>
@@ -121,7 +121,7 @@
 		         </plugins>
 			</build>
         </profile>
-		
+		-->
     </profiles>
 	
 	<dependencies>
