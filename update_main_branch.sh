@@ -20,7 +20,7 @@ then
 	mvn clean install -P $2
 	git add .
 	git commit -m "commiting after execution of project"
-	git push origin master
+	git push origin dev
 else
 	echo "incorrect input"
 fi
