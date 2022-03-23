@@ -11,10 +11,10 @@ then
 elif [ $1 == "push" ] && [ $2 == "master" ]
 then
 	echo "in master"
-        git checkout master
         git add .
         git commit -m "commit for push request on master"
-        gti push origin master
+        git checkout master
+	git push origin master
 #if user wants to execute commit and push to dev
 elif [ $1 == "push" ]
 then
