@@ -7,20 +7,19 @@ then
 	#commiting current snapshot to the local repo
 	git commit -m "commit changes to local repo"
 
-
 #if user wants to execute commit and push to master
+elif [ $1 == "push" ] && [ $2 == "master"]
+then
+        git checkout master
+        git add .
+        git commit -m "commit for push request on master"
+        gti push origin master
+#if user wants to execute commit and push to dev
 elif [ $1 == "push" ]
 then
 	git add .
 	git commit -m "commit for push request on dev"
 	git push origin dev
-#if user wants to execute commit and push to master
-elif [ $1 == "push" ] && [ $2 == "master"]
-then
-	git checkout master
-	git add .
-	git commit -m "commit for push request on master"
-	gti push origin master
 #if user wants to run the project and then push to master 
 elif [ $1 == "run" ]
 then
