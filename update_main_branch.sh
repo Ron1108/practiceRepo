@@ -8,7 +8,7 @@ then
 	git commit -m "commit changes to local repo"
 
 #if user wants to execute commit and push to master
-elif [ $1 == "push" ] && [ $2 == "master"]
+elif [ $1 == "push" ] && [ $2 == "master" ]
 then
 	echo "in master"
         git checkout master
