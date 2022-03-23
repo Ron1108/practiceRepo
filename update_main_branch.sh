@@ -14,6 +14,7 @@ then
         git add .
         git commit -m "commit for push request on master"
         git checkout master
+	git pull origin master
 	git push origin master
 #if user wants to execute commit and push to dev
 elif [ $1 == "push" ]
