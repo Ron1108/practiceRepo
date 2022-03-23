@@ -17,9 +17,9 @@ then
 #if user wants to execute commit and push to master
 elif [ $1 == "push" ] && [ $2 == "master"]
 then
+	git checkout master
 	git add .
 	git commit -m "commit for push request on master"
-	git checkout master
 	gti push origin master
 #if user wants to run the project and then push to master 
 elif [ $1 == "run" ]
