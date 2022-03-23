@@ -13,7 +13,7 @@ elif [ $1 == "push" ]
 then
 	git add .
 	git commit -m "commit for push request on master"
-	git push origin master
+	git push origin dev
 #if user wants to run the project and then push to master 
 elif [ $1 == "run " ]
 then
