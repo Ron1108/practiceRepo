@@ -1,6 +1,27 @@
-if [ 1 == 0 ]
+
+#!/bin/bash
+if [ $1 == "commit" ]
 then
-	echo "running"
+	#adding files to the staging are
+	git add .
+	#commiting current snapshot to the local repo
+	git commit -m "commit changes to local repo"
+
+
+#if user wants to execute commit and push to master
+elif [ $1 == "push" ]
+then
+	git add .
+	git commit -m "commit for push request on master"
+	git push origin dev
+#if user wants to run the project and then push to master 
+elif [ $1 == "run" ]
+then
+	mvn clean install -P $2
+	git add .
+	git commit -m "commiting after execution of project"
+	git push origin dev
 else
-	echo "if is 0"
+	echo "incorrect input"
 fi
+
