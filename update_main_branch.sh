@@ -12,6 +12,9 @@ then
         git add .
         git commit -m "commit for push request on master"
         git checkout master
+	#git pull origin master
+	git add .
+  git commit -m "commit for push request on master"
 	git pull origin master
 	git push origin master
 	git checkout dev
