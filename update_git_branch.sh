@@ -50,6 +50,7 @@ then
 	fi
 	git commit -m "commiting after execution of project"
 	git push origin dev
+	git push origin master
 else
 	echo "incorrect input"
 fi
