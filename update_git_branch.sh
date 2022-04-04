@@ -19,6 +19,9 @@ then
 #if user wants to execute commit and push to dev
 elif [ $task == "push" ]
 then
+	#Asking for the file name as user input 
+	echo "Enter the file name to be commited :"
+	read fileName
 	if [ $fileName == "all" ]
 	then
 		#adding files to the staging are
@@ -31,6 +34,9 @@ then
 #if user wants to run the project and then push to master 
 elif [ $task == "run" ]
 then
+	#Asking for the file name as user input 
+	echo "Enter the file name to be commited :"
+	read fileName
 	mvn clean install -P $2
 	if [ $fileName == "all" ]
 	then
