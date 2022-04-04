@@ -1,10 +1,10 @@
 #!/bin/bash
-echo "Enter the file name to be commited :"
+echo "Enter the Command to RUN :"
 read task
 if [ $task == "commit" ]
 then
 	#Asking for the file name as user input 
-	echo "Enter the file name to be commited :"
+	echo "Enter the file name to be Updated :"
 	read fileName
 	if [ $fileName == "all" ]
 	then
@@ -20,7 +20,7 @@ then
 elif [ $task == "push" ]
 then
 	#Asking for the file name as user input 
-	echo "Enter the file name to be commited :"
+	echo "Enter the file name to be Updated :"
 	read fileName
 	if [ $fileName == "all" ]
 	then
@@ -35,9 +35,12 @@ then
 elif [ $task == "run" ]
 then
 	#Asking for the file name as user input 
-	echo "Enter the file name to be commited :"
+	echo "Enter the file name to be Updated :"
 	read fileName
-	mvn clean install -P $2
+	#Asking for the ENV as user input 
+	echo "Enter the Enviroment for the project build :"
+	read env
+	mvn clean install -P $env
 	if [ $fileName == "all" ]
 	then
 		#adding files to the staging are
