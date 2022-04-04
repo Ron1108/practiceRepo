@@ -1,5 +1,7 @@
 #!/bin/bash
-if [ $1 == "commit" ]
+echo "Enter the file name to be commited :"
+read task
+if [ $task == "commit" ]
 then
 	#Asking for the file name as user input 
 	echo "Enter the file name to be commited :"
@@ -28,13 +30,13 @@ then
 	git checkout dev
 
 #if user wants to execute commit and push to dev
-elif [ $1 == "push" ]
+elif [ $task == "push" ]
 then
 	git add .
 	git commit -m "commit for push request on dev"
 	git push origin dev
 #if user wants to run the project and then push to master 
-elif [ $1 == "run" ]
+elif [ $task == "run" ]
 then
 	mvn clean install -P $2
 	git add .
